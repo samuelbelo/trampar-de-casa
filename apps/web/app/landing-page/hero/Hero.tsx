@@ -1,16 +1,17 @@
-'use client'
-import React, { useContext, useEffect, useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import Confetti from 'react-confetti'
-import { StatusCodes } from 'http-status-codes'
-import { LoadingContext } from '../../contexts/LoadingContext'
-import { ApiRoutes } from 'shared/src/enums'
-import { useToast } from '../../components/ui/use-toast'
-import { PartnerCompanies } from './PartnerCompanies'
-import { ErrorMessage } from '@hookform/error-message'
-import { useQuery } from 'react-query'
+"use client";
+import React, { useContext, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import Confetti from "react-confetti";
+import { StatusCodes } from "http-status-codes";
+import { LoadingContext } from "../../contexts/LoadingContext";
+import { ApiRoutes } from "shared/src/enums";
+import { useToast } from "../../components/ui/use-toast";
+import { PartnerCompanies } from "./PartnerCompanies";
+import { ErrorMessage } from "@hookform/error-message";
+import { useQuery } from "react-query";
+import { ToggleTheme } from "../../components/ui/toggleTheme";
 import Image from 'next/image'
 
 const validationSchema = z.object({
@@ -121,6 +122,9 @@ export const Hero = () => {
                   </li>
                   <li className="mr-9 font-medium hover:text-gray-700">
                     <a href="#perguntas-frequentes">Perguntas Frequentes</a>
+                  </li>
+                  <li className="mr-9 font-medium hover:text-gray-700">
+                    <ToggleTheme />
                   </li>
                 </ul>
               </nav>
@@ -242,10 +246,10 @@ export const Hero = () => {
               <h1 className="mb-6 text-6xl md:text-8xl lg:text-10xl font-bold font-heading leading-none">
                 Vagas remotas no seu e-mail
               </h1>
-              <p className="mb-9 text-lg text-gray-900 font-medium md:max-w-md">
+              <p className="mb-9 text-lg dark:text-gray-200 text-gray-900 font-medium md:max-w-md">
                 Levamos as melhores oportunidades de trampo até você.
               </p>
-              <div className="p-1.5 xl:pl-7 inline-block w-full border-2 border-black rounded-xl focus-within:ring focus-within:ring-indigo-300 -m-2.5">
+              <div className="p-1.5 xl:pl-7 inline-block w-full border-2 dark:border-white border-black rounded-xl focus-within:ring focus-within:ring-indigo-300 -m-2.5">
                 <form
                   onSubmit={async (e) => {
                     e.preventDefault()
@@ -255,7 +259,7 @@ export const Hero = () => {
                   <div className="flex flex-wrap items-center">
                     <div className="w-full xl:flex-1">
                       <input
-                        className="p-3 xl:p-0 xl:pr-7 w-full text-gray-600 placeholder-gray-600 outline-none"
+                        className="p-3 xl:p-0 xl:pr-7 w-full dark:bg-transparent text-gray-600 dark:text-gray-200 dark:placeholder-gray-400 placeholder-gray-600 outline-none"
                         id="email"
                         type="email"
                         disabled={isLoading}

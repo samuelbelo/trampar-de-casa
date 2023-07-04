@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const HowItWorks = () => (
-  <section id="como-funciona" className="py-32 bg-white overflow-hidden">
+  <section id="como-funciona" className="py-32 bg-transparent overflow-hidden">
     <div className="container px-4 mx-auto">
       <div className="flex flex-wrap lg:items-center -m-8">
         <div className="w-full md:w-1/2 p-8">
@@ -42,7 +42,7 @@ export const HowItWorks = () => (
                     <h3 className="mb-3 text-2xl font-semibold leading-snug">
                       Você se inscreve
                     </h3>
-                    <p className="text-gray-700 font-medium leading-relaxed">
+                    <p className="text-gray-700 dark:text-gray-400 font-medium leading-relaxed">
                       Forneça-nos seu melhor e-mail e defina suas preferências
                       de trabalho (cargo, tecnologias e idioma).
                     </p>
@@ -74,7 +74,7 @@ export const HowItWorks = () => (
                     <h3 className="mb-3 text-2xl font-semibold leading-snug">
                       Analisamos as vagas
                     </h3>
-                    <p className="text-gray-700 font-medium leading-relaxed">
+                    <p className="text-gray-700 dark:text-gray-400 font-medium leading-relaxed">
                       Nós cruzamos suas preferências com nossas vagas
                       disponíveis.
                     </p>
@@ -101,9 +101,9 @@ export const HowItWorks = () => (
                     <h3 className="mb-3 text-2xl font-semibold leading-snug">
                       Enviamos as oportunidades
                     </h3>
-                    <p className="text-gray-700 font-medium leading-relaxed">
-                      Toda quarta-feira às 11h enviaremos uma lista com as vagas
-                      que fazem mais sentido para você.
+                    <p className="text-gray-700 dark:text-gray-400 font-medium leading-relaxed">
+                      Toda quarta-feira às 11h enviaremos uma lista
+                      com as vagas que fazem mais sentido para você.
                     </p>
                   </div>
                 </div>
@@ -114,4 +114,4 @@ export const HowItWorks = () => (
       </div>
     </div>
   </section>
-)
+);
